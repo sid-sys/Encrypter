@@ -8,7 +8,7 @@ if st.button("Encrypt"):
     encMessage = Fernet(key).encrypt(message.encode())
     encMessage = encMessage.decode("utf-8") 
     st.write("Your Encrypted message:")
-    st.write(encMessage)
+    st.json(encMessage)
 
 EncMessage =  st.text_input("Enter Encypted Message")
 if st.button("Decrypt"):
